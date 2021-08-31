@@ -1,9 +1,9 @@
-const newCategoryandler = async (event) => {
+const newCategoryHandler = async (event) => {
     event.preventDefault();
   
     const title = document.querySelector('#category-title').value.trim();
   
-    if (title && content) {
+    if (title) {
       const response = await fetch(`/api/categories`, {
         method: 'POST',
         body: JSON.stringify({ title }),
