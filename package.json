@@ -1,7 +1,7 @@
 {
-  "name": "crowd-funding",
+  "name": "im-i-a-joke-to-you",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project 2 https://www.npmjs.com/package/rater-js",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,11 +19,20 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
+    "rater-js": "^1.0.1",
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "prettier": "^2.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rach-Gee/Am-I-a-Joke-to-you.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rach-Gee/Am-I-a-Joke-to-you/issues"
+  },
+  "homepage": "https://github.com/Rach-Gee/Am-I-a-Joke-to-you#readme"
 }
