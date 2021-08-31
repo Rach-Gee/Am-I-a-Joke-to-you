@@ -1,2 +1,4 @@
 DROP DATABASE IF EXISTS jokes_DB;
 CREATE DATABASE jokes_DB;
+
+USE jokes_DB;

@@ -5,7 +5,7 @@ const homeRoutes = require('./homeRoutes');
 const login = require('./login');
 
 router.use('/', homeRoutes);
-router.use('/api', apiRoutes);
-router.use('/login', login);
+// router.use('/api', apiRoutes);
+// router.use('/login', login);
 
 module.exports = router;
