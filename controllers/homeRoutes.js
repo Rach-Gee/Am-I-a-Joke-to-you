@@ -39,5 +39,19 @@ router.get('/category/:id', async (req, res) => {
   }
 });
 
+router.get('/joke/:id', async (req, res) => {
+  try {
+    const jokeData = await Joke.findByPk(req.params.id, {
+    });
+    console.log("joke1:" + jokeData)
+    const joke = jokeData.get({ plain: true });
+    console.log("joke:" + { joke })
+    res.render('joke', {
+      ...joke,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
