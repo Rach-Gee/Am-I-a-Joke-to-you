@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Joke } = require('../models');
+const { Category, Joke, Review } = require('../models');
 // const withAuth = require('../utils/auth');
 
 
@@ -42,10 +42,15 @@ router.get('/category/:id', async (req, res) => {
 router.get('/joke/:id', async (req, res) => {
   try {
     const jokeData = await Joke.findByPk(req.params.id, {
+      include:[
+      {
+        model: Review,
+      },
+    ]
     });
-    console.log("joke1:" + jokeData)
+    
     const joke = jokeData.get({ plain: true });
-    console.log("joke:" + { joke })
+    
     res.render('joke', {
       ...joke,
     });
