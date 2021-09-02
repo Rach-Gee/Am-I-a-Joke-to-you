@@ -7,10 +7,11 @@ const newJokeHandler = async (event) => {
       window.location.toString().split('/').length - 1
     ];
     
-
+    const body = ({ rating, content, joke_id, })
+    console.log(body)
 
     if (rating && content) {
-      const response = await fetch(`/api/jokes`, {
+      const response = await fetch(`/api/reviews`, {
         method: 'POST',
         body: JSON.stringify({ rating, content, joke_id, }),
         headers: {
