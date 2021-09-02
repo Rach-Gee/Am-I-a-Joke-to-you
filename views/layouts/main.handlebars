@@ -10,7 +10,7 @@
 </head>
 
 <body>
-{{!-- Delete this later --}}
+  {{!-- Delete this later --}}
   <div id="rater"></div>
 
 
@@ -29,12 +29,13 @@
         The Tech Blog
       </h1>
     </header>
+    <div class="rate"></div>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
-      
+
     </footer>
   </div>
 
@@ -42,9 +43,14 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
+  <script src="/js/index.js"></script>
+  <script src="/js/lib/rater.js"></script>
+  {{!-- <script src="/js/lib/rater.min.js"></script> --}}
 </body>
 
 {{!-- Delete this later --}}
-{{!-- <script src="node-modules/rater-js/index.js"></script> --}}
+{{!--
+<script src="node-modules/rater-js/index.js"></script> --}}
 
 </html>
