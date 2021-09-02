@@ -1,19 +1,16 @@
-var rater = require("rater-js");
 
-var myRater = rater({element: document.querySelector("#rater"), rateCallback: function rateCallback(rating, done) {
-    //make async call to server however you want
-    //in this example we have a 'service' that rate and returns the average rating
-    myDataService.rate(rate).then(function(avgRating) {
-        //update the avarage rating with the one we get from the server
-        myRater.setRating(avgRating);
-         //we could disable the rater to prevent another rating
-         //if we dont want the user to be able to change their mind
-        myRater.disable();
-        //dont forget to call done
-        done();
-    }, function(error) {
-            //handle the error
-            //dont forget to call done
-            done();
-    });
-}});
+        $(document).ready(function(){
+            var options = {
+                max_value: 5,
+                step_size: 0.5,
+                selected_symbol_type: 'utf8_star',
+                url: 'http://localhost/test.php',
+                initial_value: 3,
+                update_input_field_name: $("#input2"),
+            }
+            $(".rate").rate(options);
+
+            $(".rate").rate("setFace", 5, '😊');
+            $(".rate").rate("setFace", 1, '😒');
+
+        })
