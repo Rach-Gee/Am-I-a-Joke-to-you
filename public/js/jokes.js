@@ -18,7 +18,7 @@ const newJokeHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace(`${category_id}`);
       } else {
         alert('Failed to create category');
       }
