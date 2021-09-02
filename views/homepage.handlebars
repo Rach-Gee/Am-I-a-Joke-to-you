@@ -4,12 +4,18 @@
       <div class="form-group">
         <label for="category-title">Blog title:</label>
         <input class="form-input" type="text" id="category-title" name="category-title" />
+        <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
 </div>
 
 {{#each categories as |category|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h3>{{category.title}}</h3>
+        <h3><a href="/category/{{category.id}}">{{category.title}}</a></h3>
       </div>
     </div>
  {{/each}}
+
+ <script src="./js/categories.js"></script>
