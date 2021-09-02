@@ -1,0 +1,12 @@
+<h1>Your Joke!</h1>
+</div>
+{{title}} {{content}}
+{{#each jokes as |joke|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h3>{{joke.title}}</h3>
+        <h3>{{joke.content}}</h3>
+      </div>
+    </div>
+ {{/each}}
+
