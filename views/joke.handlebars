@@ -1,12 +1,27 @@
 <h1>Your Joke!</h1>
 </div>
-{{title}} {{content}}
-{{#each jokes as |joke|}}
+
+
+<h3>{{title}}<br>{{content}}</h3>
+
+<form class="form new-project-form">
+      <div class="form-group">
+        <label for="review-rating">Blog title:</label>
+        <input class="form-input" type="text" id="review-rating" name="review-rating" />
+        <div class="form-group">
+          <label for="review-content">Blog title:</label>
+        <input class="form-input" type="text" id="review-content" name="review-content" />
+        <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+</div>
+
+ {{#each reviews as |review|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h3>{{joke.title}}</h3>
-        <h3>{{joke.content}}</h3>
+        <h3>here:{{review.content}}</h3>
       </div>
     </div>
- {{/each}}
+    {{/each}}
 
+    <script src="/js/reviews.js"></script>
