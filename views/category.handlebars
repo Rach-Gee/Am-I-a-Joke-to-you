@@ -1,0 +1,22 @@
+<h1>Create a new category</h1>
+
+<form class="form new-project-form">
+      <div class="form-group">
+        <label for="joke-title">Joke title:</label>
+        <input class="form-input" type="text" id="joke-title" name="joke-title" />
+        <label for="joke-content">Joke Content :</label>
+        <input class="form-input" type="text" id="joke-content" name="joke-content" />
+        <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+</div>
+
+{{#each jokes as |joke|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h3>{{joke.title}}</h3>
+        
+      </div>
+    </div>
+ {{/each}}
+
+ <script src="/js/jokes.js"></script>
