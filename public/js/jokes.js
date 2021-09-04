@@ -15,10 +15,12 @@ const newJokeHandler = async (event) => {
         headers: {
           'Content-Type': 'application/json',
         },
-      });
-  
+      }); 
       if (response.ok) {
         document.location.replace(`${category_id}`);
+      }       
+      if (!response.ok) {
+        alert('You need to be logged in to do that!');
       } else {
         alert('Failed to create category');
       }
