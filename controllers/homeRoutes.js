@@ -33,6 +33,7 @@ router.get('/category/:id', async (req, res) => {
     console.log(category)
     res.render('category', {
       ...category,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -53,6 +54,7 @@ router.get('/joke/:id', async (req, res) => {
     
     res.render('joke', {
       ...joke,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
