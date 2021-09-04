@@ -14,7 +14,11 @@ const newCategoryHandler = async (event) => {
   
       if (response.ok) {
         document.location.replace('/');
-      } else {
+      } 
+      if (!response.ok) {
+        alert('You need to be logged in to do that!');
+      }
+      else {
         alert('Failed to create category');
       }
     }
