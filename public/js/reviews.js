@@ -3,7 +3,7 @@ const newJokeHandler = async (event) => {
   
     const rating = document.querySelector('#review-rating').value.trim();
     const content = document.querySelector('#review-content').value.trim();
-    const star = document.querySelector('#rateNum').value.trim();
+    //const star = document.querySelector('#rateNum').value.trim();
     const joke_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
@@ -12,7 +12,7 @@ const newJokeHandler = async (event) => {
     console.log(body)
 
     if (rating && content) {
-      console.log("-------------" + star)
+      //console.log("-------------" + star)
       const response = await fetch(`/api/reviews`, {
         method: 'POST',
         body: JSON.stringify({ rating, content, joke_id, }),
