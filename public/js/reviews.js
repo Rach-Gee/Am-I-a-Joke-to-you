@@ -23,8 +23,7 @@ const newJokeHandler = async (event) => {
       alert('Failed to create review');
     }
   }
-  
-};
+
 
 document
   .addEventListener('submit', newJokeHandler);
