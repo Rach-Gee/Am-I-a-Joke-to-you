@@ -1,20 +1,23 @@
-<h1>Create a new category</h1>
-
-<form class="form new-project-form">
-      <div class="form-group">
-        <label for="category-title">Category title:</label>
-        <input class="form-input" type="text" id="category-title" name="category-title" />
-        <div class="form-group">
-        <button class="btn btn-primary" type="submit">Submit</button>
-      </div>
-</div>
+<h1>What are you in the mood for?</h1>
 
 {{#each categories as |category|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h3><a href="/category/{{category.id}}">{{category.title}}</a></h3>
+        <h3 class="category-list"><a href="/category/{{category.id}}">{{category.title}}</a></h3>
       </div>
     </div>
  {{/each}}
+
+ <h3 class='lead'>Dont have what you are looking for? Create your very own!<h3>
+
+<form class="form new-project-form container-fluid">
+      <div class="form-group mb-3">
+        <label for="category-title">Category title:</label>
+        <input class="form-input" type="text" id="category-title" name="category-title" />
+        <div class="form-group mb-3">
+        <button class="btn btn-primary" type="submit">Create!</button>
+      </div>
+</div>
+
 
  <script src="./js/categories.js"></script>

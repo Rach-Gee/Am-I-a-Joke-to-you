@@ -1,22 +1,22 @@
-<h1>Create a new joke:</h1>
-
-<form class="form new-project-form">
-      <div class="form-group">
-        <label for="joke-title">Joke title:</label>
-        <input class="form-input" type="text" id="joke-title" name="joke-title" />
-        <label for="joke-content">Joke Content :</label>
-        <input class="form-input" type="text" id="joke-content" name="joke-content" />
-        <div class="form-group">
-        <button class="btn btn-primary" type="submit">Submit</button>
-</div>
 <h2>Current Jokes:</h2>
 {{#each jokes as |joke|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h3><a href="/joke/{{joke.id}}">{{joke.title}}</a></h3>
-        
       </div>
     </div>
  {{/each}}
+
+<h1>Create a new joke:</h1>
+<form class="form new-project-form container-fluid">
+      <div class="form-group mb-3">
+        <label for="joke-title">Joke title:</label>
+        <input class="form-input" type="text" id="joke-title" name="joke-title" />
+        <label for="joke-content">Joke Content :</label>
+        <input class="form-input mb-3" type="text" id="joke-content" name="joke-content" />
+        <div class="form-group">
+        <button class="btn btn-primary" type="submit">Create!</button>
+</div>
+
 
  <script src="/js/jokes.js"></script>
