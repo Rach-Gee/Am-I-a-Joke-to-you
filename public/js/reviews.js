@@ -18,11 +18,12 @@ const newJokeHandler = async (event) => {
     });
 
     if (response.ok) {
+      alert('Review created!')
       document.location.replace(`${joke_id}`);
     
     }
 
-    if (!response.ok) {
+    else if (!response.ok) {
       alert('You need to be logged in to do that!');
     
     }

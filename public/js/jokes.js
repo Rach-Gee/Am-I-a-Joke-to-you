@@ -17,9 +17,10 @@ const newJokeHandler = async (event) => {
         },
       }); 
       if (response.ok) {
+        alert('Joke Created!')
         document.location.replace(`${category_id}`);
       }       
-      if (!response.ok) {
+      else if (!response.ok) {
         alert('You need to be logged in to do that!');
       } else {
         alert('Failed to create category');
