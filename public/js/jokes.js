@@ -11,7 +11,7 @@ const newJokeHandler = async (event) => {
     if (title && content) {
       const response = await fetch(`/api/jokes`, {
         method: 'POST',
-        body: JSON.stringify({ title, content, category_id }),
+        body: JSON.stringify({ title, content, category_id, }),
         headers: {
           'Content-Type': 'application/json',
         },

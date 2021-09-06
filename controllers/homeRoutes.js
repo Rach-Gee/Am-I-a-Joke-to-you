@@ -36,6 +36,7 @@ router.get('/category/:id', async (req, res) => {
       logged_in: req.session.logged_in,
     });
   } catch (err) {
+    
     res.status(500).json(err);
   }
 });
@@ -48,17 +49,21 @@ router.get('/joke/:id', async (req, res) => {
         model: Review,
         include:[User]
       },
-      
+      {
+        model: User,
+        as: 'jokeUser'
+      },
     ]
     });
-    
+    console.log(jokeData)
     const joke = jokeData.get({ plain: true });
-   
+    console.log(joke)
     res.render('joke', {
       ...joke,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
+    console.error(err)
     res.status(500).json(err);
   }
 });
