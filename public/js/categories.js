@@ -1,6 +1,6 @@
 const newCategoryHandler = async (event) => {
     event.preventDefault();
-  
+
     const title = document.querySelector('#category-title').value.trim();
   
     if (title) {
@@ -27,3 +27,4 @@ const newCategoryHandler = async (event) => {
   
   document
     .addEventListener('submit', newCategoryHandler);
+
