@@ -6,7 +6,7 @@ router.post('/', withAuth, async (req, res) => {
     try {
       const newCategory = await Joke.create({
         ...req.body,
-        
+        user_id: req.session.user_id
       });
   
       res.status(200).json(newCategory);
