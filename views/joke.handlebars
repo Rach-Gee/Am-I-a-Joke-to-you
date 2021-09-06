@@ -6,6 +6,7 @@
  {{#each reviews as |review|}}
     <div class="row mb-2">
       <div class="col-md-8">
+        <h3>Posted by: {{user.username}} at {{review.created_date}}</h3>
         <h3>here: {{review.content}}</h3>
         <p>score: {{review.rating}}/5 </p>
       </div>
@@ -25,4 +26,4 @@
 
 
 
-    <script src="/js/reviews.js"></script>
+<script src="/js/reviews.js"></script>

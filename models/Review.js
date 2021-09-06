@@ -20,6 +20,10 @@ Review.init(
       allowNull: false,
       unique: false,
     },
+    created_date: { 
+      type: DataTypes.DATEONLY, 
+      defaultValue: DataTypes.NOW 
+    },
     joke_id: {
       type: DataTypes.INTEGER,
       references: {
