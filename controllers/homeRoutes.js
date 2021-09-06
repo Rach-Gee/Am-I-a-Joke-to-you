@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Joke, Review } = require('../models');
+const { Category, Joke, Review, User } = require('../models');
 // const withAuth = require('../utils/auth');
 
 
@@ -46,12 +46,14 @@ router.get('/joke/:id', async (req, res) => {
       include:[
       {
         model: Review,
+        include:[User]
       },
+      
     ]
     });
     
     const joke = jokeData.get({ plain: true });
-    
+   
     res.render('joke', {
       ...joke,
       logged_in: req.session.logged_in,
