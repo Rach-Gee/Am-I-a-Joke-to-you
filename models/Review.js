@@ -1,10 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-let banana;
-
-
-
 class Review extends Model {}
 
 Review.init(
