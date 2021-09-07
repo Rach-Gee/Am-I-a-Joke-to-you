@@ -1,5 +1,4 @@
 
-
 /* change the whole image used as the star. Make sure to set starSize in options if not 16px.
 first image is for the 'off' mode */
 .star-rating {
@@ -14,12 +13,12 @@ first image is for the 'off' mode */
 /*---------------------------------------------------------------------*/
 
 :root {
-        --primary: #c1c8e4;
-        --secondary: #97aabd;
-        --tertiary: #9e5a63;
-        --light-dark: #644e5b;
-        --dark: #314455;
-        --border-radius: .3rem;
+      --primary: #530101;
+      --secondary: #97AABD;
+      --tertiary: #9E5A63;
+      --light-dark: #8b3913;
+      --dark: #af7a07;
+      --border-radius: .3rem;
       }
       
       * {
@@ -72,12 +71,12 @@ first image is for the 'off' mode */
       
       .login-form {
         border: var(--light-dark) solid;
-        padding: 15px;
+        padding: 25px;
       }
       
       .signup-form {
         border: var(--light-dark) solid;
-        padding: 15px;
+        padding: 25px;
       }
       
       #password-login {
@@ -115,7 +114,7 @@ first image is for the 'off' mode */
         color: var(--primary);
         text-align: center;
         display: inline-block;
-        font-size: 35px;
+        font-size: 40px;
         background-color: var(--dark);
         border: none;
         font-family: "IBM Plex Sans", sans-serif;
@@ -129,19 +128,19 @@ first image is for the 'off' mode */
         display: block;
         margin: 5px 0;
         border-radius: var(--border-radius);
-        color: var(--primary);
+        color: var(--dark);
         border: none;
         outline: none;
-        background-color: var(--light-dark);
-        box-shadow: 3px 3px var(--dark);
+        background-color: rgb(10, 85, 10);
+        box-shadow: 3px 3px #2e6833;
         transform: translate(-1px, -1px);
       }
       
        .btn:hover {
         color: var(--primary);
-        background-color: var(--tertiary);
+        background-color: #069412;
         transform: translate(0, 0);
-        box-shadow: 2px 2px var(--dark);
+        box-shadow: 3px 3px rgb(10, 85, 10);
       }
       
       .btn-inline {
@@ -171,8 +170,11 @@ first image is for the 'off' mode */
         box-shadow: 2px 2px var(--dark);
       }
 
-      .category-list {
-
+      a { 
+        text-decoration: none;
+        color: #11941c;
+        font-style: italic;
+        text-transform: capitalize;
       }
       
       .hero {
