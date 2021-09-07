@@ -4,7 +4,7 @@
 <h3 class="ms-3">{{content}}</h3>
 <p class="ms-3">by {{jokeUser.username}}
 <p>
-
+{{#if logged_in}}
 <form class="form new-project-form container-fluid">
   <div class="form-group mb-3">
     <label for="review-rating">Rate this Joke</label>
@@ -16,7 +16,7 @@
         <button id="jokeReview" class="btn btn-primary" type="submit">Create!</button>
       </div>
     </div>
-
+{{/if}}
     {{#each reviews as |review|}}
     <div class="card mx-3 py-0">
       <div class="card-header">
