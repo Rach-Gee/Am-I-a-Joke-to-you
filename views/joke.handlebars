@@ -1,33 +1,32 @@
-<h1>Your Joke!</h1>
+<h1>{{title}}</h1>
 </div>
 
-<h3>{{title}}<br>{{content}} by {{jokeUser.username}}</h3>
-
-{{#each reviews as |review|}}
-<div class="card">
-  <div class="card-header">
-    Posted by: {{user.username}} on {{review.created_date}}
-  </div>
-  <div class="card-body">
-  <p class="card-text">{{review.content}}</h3>
-  <p class="card-text">{{user.username}} rated this joke a {{review.rating}}/5 </p>
-</div>
-</div>
-
-{{/each}}
+<h3 class="ms-3">{{content}}</h3>
+<p class="ms-3">by {{jokeUser.username}}
+<p>
 
 <form class="form new-project-form container-fluid">
   <div class="form-group mb-3">
-    <label for="review-rating">Rate this Joke:</label>
-    <div id="rateNum review-rating" class="rate rating"></div>
+    <label for="review-rating">Rate this Joke</label>
+    <div id="rateNum review-rating " class="rate rating"></div>
     <div class="form-group mb-3">
-      <label for="review-content">What do you think?</label>
+      <label for="review-content">Tell us why?</label>
       <input class="form-input" type="text" id="review-content" name="review-content" />
       <div class="form-group">
         <button id="jokeReview" class="btn btn-primary" type="submit">Create!</button>
       </div>
     </div>
 
+    {{#each reviews as |review|}}
+    <div class="card mx-3 py-0">
+      <div class="card-header">
+        Posted by: {{user.username}} rated this joke a {{review.rating}}/5 on {{format_date review.created_date}}
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{review.content}}</h3>
+      </div>
+    </div>
+    {{/each}}
 
 
     <script src="/js/reviews.js"></script>
