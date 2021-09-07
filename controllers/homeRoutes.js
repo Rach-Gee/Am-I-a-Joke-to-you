@@ -5,15 +5,15 @@ const { Category, Joke, Review, User } = require('../models');
 
 router.get('/', async (req, res) => {
   const categoryData = await Category.findAll().catch((err) => {
-    console.log(err)
+    console.log(err);
     res.json(err);
   });
 
-  
-  console.log(categoryData)
+
+  console.log(categoryData);
   // const categories = categoryData.get({ plain: true })
   const categories = categoryData.map((category) => category.get({ plain: true }));
-  console.log(categories)
+  console.log(categories);
   res.render('homepage', { categories, logged_in: req.session.logged_in, });
 });
 
@@ -25,18 +25,18 @@ router.get('/category/:id', async (req, res) => {
         {
           model: Joke,
         },
-      
+
       ],
     });
 
     const category = categoryData.get({ plain: true });
-    console.log(category)
+    console.log(category);
     res.render('category', {
       ...category,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-    
+
     res.status(500).json(err);
   }
 });
@@ -45,25 +45,27 @@ router.get('/joke/:id', async (req, res) => {
   try {
     const jokeData = await Joke.findByPk(req.params.id, {
       include:[
-      {
-        model: Review,
-        include:[User]
-      },
-      {
-        model: User,
-        as: 'jokeUser'
-      },
-    ]
+        {
+          model: Review,
+          include:[User],
+          attributes: { exclude: ['password'] },
+        },
+        {
+          model: User,
+          as: 'jokeUser',
+          attributes: { exclude: ['password'] },
+        },
+      ]
     });
-    console.log(jokeData)
+    console.log(jokeData);
     const joke = jokeData.get({ plain: true });
-    console.log(joke)
+    console.log(joke);
     res.render('joke', {
       ...joke,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-    console.error(err)
+    console.error(err);
     res.status(500).json(err);
   }
 });

@@ -13,11 +13,11 @@ first image is for the 'off' mode */
 /*---------------------------------------------------------------------*/
 
 :root {
-      --primary: #530101;
+      --primary: #FFFFF0;
       --secondary: #97AABD;
       --tertiary: #9E5A63;
-      --light-dark: #8b3913;
-      --dark: #af7a07;
+      --light-dark: #744b63;
+      --dark: #314455;
       --border-radius: .3rem;
       }
       
@@ -29,7 +29,7 @@ first image is for the 'off' mode */
         background-color: var(--primary);
         margin: 0;
         padding: 0;
-        font-family: "IBM Plex Sans", sans-serif;
+        font-family: "Concert One", sans-serif;
         color: var(--dark);
         line-height: 1.5;
         font-size: 16px;
@@ -58,7 +58,7 @@ first image is for the 'off' mode */
       
       nav {
         color: var(--primary);
-        font-size: 40px;
+        font-size: 30px;
       }
       
       nav a {
@@ -69,6 +69,12 @@ first image is for the 'off' mode */
         color: var(--primary);
       }
       
+      .login-register-title {
+        font-size: 60px;
+        margin: 20px auto;
+        text-align: center;
+      }
+
       .login-form {
         border: var(--light-dark) solid;
         padding: 25px;
@@ -114,10 +120,10 @@ first image is for the 'off' mode */
         color: var(--primary);
         text-align: center;
         display: inline-block;
-        font-size: 40px;
+        font-size: 30px;
         background-color: var(--dark);
         border: none;
-        font-family: "IBM Plex Sans", sans-serif;
+        font-family: "Concert One", sans-serif;
       }
       
        .btn {
@@ -131,16 +137,16 @@ first image is for the 'off' mode */
         color: var(--dark);
         border: none;
         outline: none;
-        background-color: rgb(10, 85, 10);
-        box-shadow: 3px 3px #2e6833;
+        background-color: var(--light-dark);
+        box-shadow: 3px 3px var(--dark);
         transform: translate(-1px, -1px);
       }
       
        .btn:hover {
         color: var(--primary);
-        background-color: #069412;
+        background-color: var(--dark);
         transform: translate(0, 0);
-        box-shadow: 3px 3px rgb(10, 85, 10);
+        box-shadow: 3px 3px var(--tertiary);
       }
       
       .btn-inline {
@@ -172,7 +178,7 @@ first image is for the 'off' mode */
 
       a { 
         text-decoration: none;
-        color: #11941c;
+        color: var(--light-dark);
         font-style: italic;
         text-transform: capitalize;
       }
@@ -195,6 +201,7 @@ first image is for the 'off' mode */
         display: inline-block;
         border-radius: var(--border-radius);
         box-shadow: 6px 5px var(--light-dark);
+        font-family: 'Bangers';
       }
       
       .list-group {

@@ -13,7 +13,6 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      alert('Registration Successful!');
       event.preventDefault();
       const response = await fetch('/api/users/login', {
         method: 'POST',
