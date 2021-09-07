@@ -1,15 +1,15 @@
 const newJokeHandler = async (event) => {
   event.preventDefault();
-    const rating = $(".rating").rate("getValue");
-    const content = document.querySelector('#review-content').value.trim();
-    const joke_id = window.location.toString().split('/')[
+  const rating = $('.rating').rate('getValue');
+  const content = document.querySelector('#review-content').value.trim();
+  const joke_id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
 
-  const body = ({ rating, content, joke_id})
-  console.log(body)
+  const body = ({ rating, content, joke_id});
+  console.log(body);
   if (rating && content) {
-    const response = await fetch(`/api/reviews`, {
+    const response = await fetch('/api/reviews', {
       method: 'POST',
       body: JSON.stringify({ rating, content, joke_id,}),
       headers: {
@@ -18,20 +18,12 @@ const newJokeHandler = async (event) => {
     });
 
     if (response.ok) {
-      alert('Review created!')
       document.location.replace(`${joke_id}`);
-    
-    }
-
-    else if (!response.ok) {
-      alert('You need to be logged in to do that!');
-    
-    }
-    else {
+    } else {
       alert('Failed to create review');
     }
   }
 
-}
+};
 document
   .addEventListener('submit', newJokeHandler);

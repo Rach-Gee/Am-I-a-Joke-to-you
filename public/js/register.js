@@ -13,7 +13,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      alert("Registration Successful!")
+      alert('Registration Successful!');
       event.preventDefault();
       const response = await fetch('/api/users/login', {
         method: 'POST',
@@ -21,7 +21,8 @@ const signupFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-      document.location.replace('/');}
+        document.location.replace('/');
+      }
     } else {
       alert('Failed to sign up.');
     }
