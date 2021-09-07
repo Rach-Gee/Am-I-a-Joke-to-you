@@ -1,7 +1,9 @@
 module.exports = {
-    get_emoji: () => {
-           if (review.rating = '1') {
-               return `<span for="img" aria-label="lightbulb">💡</span>`
-           }
-       }
-    }
+  format_date: (date) => {
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const closeDate = day + '/' + month + '/' + year;
+    return closeDate;
+  },
+};

@@ -20,9 +20,10 @@ Review.init(
       allowNull: false,
       unique: false,
     },
-    created_date: { 
-      type: DataTypes.DATEONLY, 
-      defaultValue: DataTypes.NOW 
+    created_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     joke_id: {
       type: DataTypes.INTEGER,
@@ -38,7 +39,7 @@ Review.init(
         key: 'id',
       },
     },
-},
+  },
   {
     sequelize,
     timestamps: false,
