@@ -134,19 +134,19 @@ first image is for the 'off' mode */
         display: block;
         margin: 5px 0;
         border-radius: var(--border-radius);
-        color: var(--dark);
         border: none;
         outline: none;
-        background-color: var(--light-dark);
-        box-shadow: 3px 3px var(--dark);
+        color: var(--primary);
+        background-color: var(--dark);
+        box-shadow: 3px 3px var(--tertiary);
         transform: translate(-1px, -1px);
       }
       
-       .btn:hover {
+      .btn:hover {
         color: var(--primary);
-        background-color: var(--dark);
+        background-color: var(--light-dark);
         transform: translate(0, 0);
-        box-shadow: 3px 3px var(--tertiary);
+        box-shadow: 3px 3px var(--dark);
       }
       
       .btn-inline {
@@ -235,6 +235,10 @@ first image is for the 'off' mode */
       
       .icon-success {
         color: rgb(29, 153, 255);
+      }
+      
+      .joke-content {
+        text-align: center;
       }
       
       /* CARDS */
