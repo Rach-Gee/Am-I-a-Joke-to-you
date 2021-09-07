@@ -28,13 +28,13 @@ Review.belongsTo(Joke, {
 });
 
 User.hasMany(Joke, {
-  foreignKey: 'user_id'  
-  });
-  
+  foreignKey: 'user_id'
+});
+
 Joke.belongsTo(User, {
   foreignKey: 'user_id',
   as: 'jokeUser'
-  });
-  
+});
+
 
 module.exports = { User, Category, Joke, Review };
