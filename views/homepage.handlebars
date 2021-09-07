@@ -7,8 +7,9 @@
     </div>
  {{/each}}
 
- <h3 class='lead'>Dont have what you are looking for? Create your very own!<h3>
+ 
 {{#if logged_in}}
+<h3 class='lead'>Dont have what you are looking for? Create your very own!</h3>
 <form class="form new-project-form container-fluid">
       <div class="form-group mb-3">
         <label for="category-title">Category title:</label>
@@ -17,6 +18,8 @@
         <button class="btn btn-primary" type="submit">Create!</button>
       </div>
 </div>
+{{else}}
+<h3 class='lead'>Sign in/Register to create your very own!</h3>
 {{/if}}
 
  <script src="./js/categories.js"></script>
