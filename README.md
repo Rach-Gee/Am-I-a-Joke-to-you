@@ -5,7 +5,7 @@
 
 ## Overview
         
-Welcome to the joke page of the centery! This app was deployed to read, create and review jokes. Come share, laugh and tell your friends! 
+Welcome to the joke page of the century! This app was deployed to read, create and review jokes. Come share, laugh and tell your friends! 
 
 1. [Installation](#Installation)
 
@@ -25,7 +25,7 @@ To utalise this app navigate to https://am-i-a-joke-to-you.herokuapp.com/.
        
 ## Usage
        
-Once you are on the page, select the category that peaks your interest and enjoy the jokes. There is added functionality for thoes of you who register and login. You will be able to add categories, jokes and leave reviews.  
+Once you are on the page, select the category that peaks your interest and enjoy the jokes. There is added functionality for those of you who register and login. You will be able to add categories, jokes and leave reviews.  
 
 ## License
 
@@ -33,7 +33,7 @@ MIT_License
        
 ## Features
        
-User auth. Posting jokes, catagory as well as leave review's with visual indicators.
+User authentication. Posting jokes, catagory as well as leave reviews with visual indicators.
         
 ## How to Contribute
         
